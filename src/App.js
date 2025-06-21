@@ -6,8 +6,8 @@ import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
-import LoginPage from "./components/LoginPage"; // 👈 create this
-// import SignupPage from "./components/SignupPage"; // 👈 optional
+import LoginPage from "./components/LoginPage";
+// import SignupPage from "./components/SignupPage"; 
 
 const HomePage = () => (
   <>
