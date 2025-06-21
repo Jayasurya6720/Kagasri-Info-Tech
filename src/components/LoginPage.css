@@ -1,0 +1,167 @@
+/* Background */
+.login-page {
+  min-height: 100vh;
+  background: url("../assert/LoginBackground.jpg") no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+/* Login Box */
+.login-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Title */
+.login-box h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  margin-bottom: 25px;
+  font-size: 15px;
+  color: #222;
+}
+
+/* Form */
+.login-form {
+  width: 100%;
+}
+
+.login-form label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.required {
+  color: red;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Password field */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 16px;
+}
+
+.forgot-link {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: #1d4ed8;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  text-decoration: none;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #333;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* Separator */
+.separator {
+  margin: 20px 0;
+  border-top: 1px solid #444;
+  position: relative;
+  height: 1px;
+}
+
+.separator::before {
+  content: "Or";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0 10px;
+  font-size: 14px;
+  color: #000;
+}
+
+/* Register */
+.register-text {
+  font-size: 14px;
+}
+
+.register-text a {
+  color: #1d4ed8;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .login-box {
+    padding: 30px 20px;
+  }
+
+  .login-box h1 {
+    font-size: 24px;
+  }
+
+  .login-box p {
+    font-size: 14px;
+  }
+
+  .login-form label {
+    font-size: 13px;
+  }
+
+  .login-form input {
+    font-size: 13px;
+  }
+
+  .login-btn {
+    font-size: 15px;
+  }
+}

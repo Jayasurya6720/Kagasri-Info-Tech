@@ -1,0 +1,113 @@
+.projects-container {
+  background: linear-gradient(to bottom right, #0696d7, #0b3bb7);
+  color: white;
+  padding: 80px 50px;
+}
+
+.projects-container h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.highlight-link {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.project-cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-card {
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards per row, subtracting gap */
+  max-width: calc(33.333% - 20px); /* cap max width */
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+.image-box {
+  position: relative;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-y: auto;
+   pointer-events: none;
+}
+
+.image-box:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+/* .project-card:hover .overlay {
+  opacity: 1;
+} */
+
+/* Description hidden initially */
+.project-card .description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px); /* Start from below */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* Animate description on hover */
+.project-card:hover .description {
+  opacity: 1;
+  transform: translateY(0); /* Move into view */
+  max-height: 200px; /* Enough height for long text */
+}
+
+@media (max-width: 900px) {
+  .project-card {
+    flex: 1 1 calc(50% - 15px); /* 2 cards per row */
+    max-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex: 1 1 100%; /* Stack one per row */
+    max-width: 100%;
+  }
+}

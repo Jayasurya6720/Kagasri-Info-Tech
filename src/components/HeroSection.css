@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fb;
+}
+
+.hero-container {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #007acc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.auth-buttons .signup {
+  background-color: white;
+  color: #007acc;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: 300;
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.hero-content p {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.highlight {
+  background-color: black;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+/* .work-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  background-color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+} */
+
+.work-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  background-color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.work-btn .arrow {
+  opacity: 0;
+  margin-left: 6px;
+  transition: all 0.3s ease;
+}
+
+.work-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.work-btn:hover .arrow {
+  opacity: 1;
+  margin-left: 12px;
+}
+
+.rotating-text {
+  display: inline-block;
+  min-width: 160px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.nav-links button {
+  background: none;
+  border: none;
+  color: white; /* or your theme color */
+  cursor: pointer;
+  font: inherit;
+  padding: 8px 16px;
+}
