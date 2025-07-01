@@ -1,21 +1,21 @@
 // src/components/AuthForm.js
 import React, { useState } from "react";
-import "./LoginPage.css";
+import "./Register.css";
 import "boxicons/css/boxicons.min.css";
 import { useNavigate } from "react-router-dom";
 
 
 const AuthForm = () => {
-    const [isActive, setIsActive] = useState(false);
-        const navigate = useNavigate();
-    
+    const [isActive, setIsActive] = useState(true);
+    const navigate = useNavigate();
+
 
     return (
-
-      <>
+        <>
         <button className="back-button" onClick={() => navigate("/")}>← Back</button>
 
         <div className={`container ${isActive ? "active" : ""}`}>
+
             {/* Login Form */}
             <div className="form-box login">
                 <form>
@@ -88,8 +88,7 @@ const AuthForm = () => {
                 </div>
             </div>
         </div>
-        
-      </>
+        </>
     );
 };
 

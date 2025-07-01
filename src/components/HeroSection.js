@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"; // ← Add this
+// import { useNavigate } from "react-router-dom"; // ← Add this
 import "./HeroSection.css";
 
 const HeroSection = () => {
   const phrases = ["Web Development", "UI/UX Design", "Digital Marketing"];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate(); // ← Hook for navigation
+  // const navigate = useNavigate(); // ← Hook for navigation
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,7 +23,7 @@ const HeroSection = () => {
 
   return (
     <div id="home" className="hero-container">
-      <nav className="navbar">
+      {/* <nav className="navbar">
         <div className="logo"><img src="/logo.png" alt="logo" /></div>
         <div className="nav-links">
           <button onClick={() => scrollToSection("home")}>HOME</button>
@@ -36,7 +36,7 @@ const HeroSection = () => {
           <button className="login" onClick={() => navigate("/login")}>LOG IN</button>
           <button className="signup">SIGN UP</button>
         </div>
-      </nav>
+      </nav> */}
 
       <div className="hero-content">
         <h1>We’re the New-Age IT Partner for</h1>
@@ -50,6 +50,26 @@ const HeroSection = () => {
           Let’s Work Together <span className="arrow">→</span>
         </button>
       </div>
+
+     <div className="scroll-circle" onClick={() => scrollToSection("about")}>
+  <svg viewBox="0 0 100 100" className="circular-text">
+    <defs>
+      <path
+        id="circlePath"
+        d="M50,50 m-30,0 a30,30 0 1,1 60,0 a30,30 0 1,1 -60,0"
+      />
+    </defs>
+    <text fill="#000" fontSize="5.5" fontWeight="600" letterSpacing="1.5px">
+      <textPath href="#circlePath" startOffset="0%">
+        SCROLL DOWN FOR MORE • SCROLL DOWN FOR MORE •
+      </textPath>
+    </text>
+  </svg>
+  <div className="arrow-icon">↓</div>
+</div>
+
+
+
     </div>
   );
 };

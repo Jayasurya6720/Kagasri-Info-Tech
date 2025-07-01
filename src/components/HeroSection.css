@@ -1,20 +1,17 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f9fb;
+  background-image: url("../HeroSc\ Bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .hero-container {
   width: 100%;
 }
 
-.navbar {
-  background-color: #007acc;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
-}
 
 .logo img {
   height: 40px;
@@ -125,4 +122,72 @@ body {
   cursor: pointer;
   font: inherit;
   padding: 8px 16px;
+}
+
+
+/* .scroll-circle {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 60px auto 0;
+  cursor: pointer;
+} */
+
+/* .circular-text {
+  width: 100%;
+  height: 100%;
+  animation: spinText 12s linear infinite;
+  transform-origin: center;
+} */
+
+/* .arrow-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+} */
+
+@keyframes spinText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.scroll-circle {
+  position: relative;
+  width: 120px;   /* ↓ decreased */
+  height: 120px;
+  margin: 50px auto 0;
+  cursor: pointer;
+}
+
+.circular-text {
+  width: 100%;
+  height: 100%;
+  animation: spinText 12s linear infinite;
+  transform-origin: center;
+}
+
+.arrow-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+@media (max-width: 768px) {
+
+   .hero-content{
+      padding: 65px 20px;
+
+   }
+
 }

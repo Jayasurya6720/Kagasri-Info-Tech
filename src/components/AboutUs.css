@@ -1,0 +1,100 @@
+:root {
+  --box-bg: #f7f5eb;
+  --quote-bg: #f3f3f3;
+  --accent: #0047ab;
+  --text: #111;
+}
+
+/* Make background sections span full width */
+.about-us-container {
+  width: 100%;
+  margin: 0;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Override inner content max-width */
+.about-us-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  margin-bottom: 64px;
+}
+
+/* Vision & Mission Section */
+.vision-mission-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 0;
+}
+.vision-mission-section > div {
+  flex: 1;
+  background: var(--box-bg);
+  padding: 32px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Quote Section */
+.quote-section {
+  margin-top: 80px;
+  padding: 32px 20px;
+  background: var(--quote-bg);
+  border-left: 6px solid var(--accent);
+  text-align: center;
+}
+
+.quote-section p {
+  font-size: 28px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Typography & Highlights */
+.vision-mission-section h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.vision-mission-section .highlight {
+  color: var(--accent);
+  font-weight: 600;
+}
+.vision-mission-section p,
+.hero p,
+.join-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.join-text {
+  margin-top: 32px;
+  padding-left: 12px;
+  border-left: 4px solid var(--accent);
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .vision-mission-section {
+    flex-direction: column;
+  }
+  .vision-mission-section > div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .vision-mission-section h2 {
+    font-size: 20px;
+  }
+  .quote-section p {
+    font-size: 24px;
+  }
+}

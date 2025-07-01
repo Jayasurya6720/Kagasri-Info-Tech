@@ -199,7 +199,7 @@ form {
 }
 
 .back-button {
-  margin: 20px;
+  margin: 15px;
   padding: 8px 16px;
   background-color: transparent;
   border: 2px solid #007acc;
@@ -207,14 +207,13 @@ form {
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .back-button:hover {
   background-color: #007acc;
   color: white;
 }
-
 
 @media screen and (max-width: 650px) {
   .container {
