@@ -11,7 +11,7 @@ const HeroSection = () => {
       setCurrentIndex(prev => (prev + 1) % phrases.length);
     }, 2000);
     return () => clearInterval(interval);
-  }, []);
+  }, [phrases.length]);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
