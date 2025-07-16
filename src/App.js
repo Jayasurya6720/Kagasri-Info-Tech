@@ -11,6 +11,8 @@ import LoginPage from "./components/LoginPage";
 import Register from "./components/Register";
 import AboutUs from "./components/AboutUs";
 import ReviewSection from "./components/ReviewSection";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
 
 // Wrapper to conditionally include Navbar and Footer
 const AppLayout = ({ children }) => {
@@ -52,6 +54,10 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/aboutus" element={<AboutUs />} />
+           <Route path="/Services" element={<Services />} />
+           <Route path="/contact" element={<Contact/>}/>
+
+
         </Routes>
       </AppLayout>
     </Router>

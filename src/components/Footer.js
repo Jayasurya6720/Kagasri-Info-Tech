@@ -1,8 +1,12 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
+
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
+  
+  
   return (
     <footer className="footer">
       <div className="footer-grid">
@@ -13,10 +17,10 @@ const Footer = () => {
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
-            <li>→ Home</li>
-            <li>→ About Us</li>
-            <li>→ Services</li>
-            <li>→ Contact</li>
+            <li><Link to="/">→ Home</Link></li>
+            <li><Link to="/aboutus">→ About Us</Link></li>
+            <li><Link to="/Services">→ Services</Link></li>
+            <li><Link to="/contact">→ Contact</Link></li>
             <li>→ Privacy Policy</li>
             <li>→ Terms & Conditions</li>
           </ul>
@@ -45,6 +49,7 @@ const Footer = () => {
           <FaFacebook />
           <FaYoutube />
         </div>
+        <hr></hr>
         <p>COPYRIGHT ©2025 KAGASRI INFO TECH. ALL RIGHTS RESERVED</p>
       </div>
     </footer>

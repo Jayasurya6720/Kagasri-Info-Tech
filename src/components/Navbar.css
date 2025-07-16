@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #0E319A;
+  background-color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,7 +16,7 @@
 .burger {
   display: none;
   font-size: 28px;
-  color: white;
+  color: #000000;
   cursor: pointer;
 }
 
@@ -31,7 +31,7 @@
 .nav-links button {
   background: none;
   border: none;
-  color: white;
+  color: #000000;
   font-size: 14px;
   cursor: pointer;
 }
@@ -41,15 +41,15 @@
   padding: 8px 16px;
   border-radius: 4px;
   font-weight: bold;
-  border: 1px solid white;
+  border: 1px solid #1873EB;
   background-color: transparent;
-  color: white;
+  color: #1873EB;
   cursor: pointer;
 }
 
 .auth-buttons .signup {
-  background-color: white;
-  color: #007acc;
+  background-color: #1873EB;
+  color: white;
 }
 
 /* ===== Responsive Mobile Styles ===== */

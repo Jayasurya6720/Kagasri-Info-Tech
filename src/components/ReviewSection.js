@@ -1,48 +1,40 @@
-import React from "react";
-import { Carousel } from "nuka-carousel";
-import { reviews } from "./reviewsData";
+import React, { useState } from "react";
+import reviews from "./reviewsData";
 import "./ReviewSection.css";
 
-const ReviewSection = () => (
-  <section className="testimonials-section">
-    <h2 className="testimonials-heading">
-      WHAT OUR PARTNERS <span>SAY</span>
-    </h2>
+const ReviewSection = () => {
+  const [current, setCurrent] = useState(0);
 
-    <div className="testimonial-wrapper">
-      <Carousel
-        wrapAround
-        renderCenterLeftControls={null}
-        renderCenterRightControls={null}
-        renderTopRightControls={({ previousSlide, nextSlide }) => (
-          <div className="top-nav">
-            <button className="arrow-btn" onClick={previousSlide}>←</button>
-            <button className="arrow-btn" onClick={nextSlide}>→</button>
+  const nextReview = () => setCurrent((prev) => (prev + 1) % reviews.length);
+  const prevReview = () => setCurrent((prev) => (prev - 1 + reviews.length) % reviews.length);
+
+  return (
+    <div className="testimonial-section">
+      <h2 className="testimonial-heading">
+        WHAT OUR PARTNERS <span className="say">SAY</span>
+      </h2>
+      <div className="testimonial-card">
+        <img src={reviews[current].logo} alt="logo" className="company-logo" />
+        <p className="testimonial-quote">“ {reviews[current].quote} ”</p>
+        <div className="testimonial-user">
+          <img src={reviews[current].avatar} alt="avatar" className="user-avatar" />
+          <div>
+            <h4>{reviews[current].name}</h4>
+            <p>{reviews[current].title}</p>
           </div>
-        )}
-        defaultControlsConfig={{
-          pagingDotsStyle: {
-            fill: "#000",
-            margin: "0 6px",
-          },
-        }}
-      >
-        {reviews.map((r, i) => (
-          <div key={i} className="testimonial-card">
-            <img src={r.logo} alt="logo" className="client-logo" />
-            <p className="quote">“{r.quote}”</p>
-            <div className="reviewer">
-              <img src={r.avatar} alt={r.name} className="avatar" />
-              <div>
-                <p className="name">{r.name}</p>
-                <p className="title">{r.title}</p>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div className="nav-buttons">
+          <button onClick={prevReview}>←</button>
+          <button onClick={nextReview}>→</button>
+        </div>
+      </div>
+      <div className="dots">
+        {reviews.map((_, index) => (
+          <span key={index} className={index === current ? "dot active" : "dot"}></span>
         ))}
-      </Carousel>
+      </div>
     </div>
-  </section>
-);
+  );
+};
 
 export default ReviewSection;

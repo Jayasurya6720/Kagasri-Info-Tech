@@ -23,9 +23,8 @@ const Navbar = () => {
       <div className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}>
         <button className="login" onClick={() => navigate("/")}>HOME</button>
         <button className="login" onClick={() => navigate("/aboutus")}>ABOUT US</button>
-        <button>SERVICES</button>
-        <button>PORTFOLIO</button>
-        <button>CONTACT</button>
+        <button className="login" onClick={() => navigate("/Services")}>SERVICES</button>
+        <button className='login' onClick={() => navigate("/Contact")}>CONTACT US</button>
       </div>
 
       <div className={`auth-buttons ${isMobileMenuOpen ? "active" : ""}`}>

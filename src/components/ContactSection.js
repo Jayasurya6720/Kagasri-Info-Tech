@@ -1,37 +1,73 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 import "./ContactSection.css";
-import { FaUser, FaEnvelope, FaPhone, FaPaperPlane, FaRegClipboard } from "react-icons/fa";
-import { BsFillChatDotsFill, BsFillQuestionCircleFill } from "react-icons/bs";
+import {
+  FaUser,
+  FaEnvelope,
+  FaPhone,
+  FaPaperPlane,
+  FaRegClipboard
+} from "react-icons/fa";
+import {
+  BsFillChatDotsFill,
+  BsFillQuestionCircleFill
+} from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
 const ContactSection = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_hxm5lgi", // ← Replace with your actual ID
+        "template_uv7cxn2", // ← Replace with your actual ID
+        form.current,
+        "SelGdyC7T3Sp6eb_o" // ← Replace with your actual public key
+      )
+      .then(
+        (result) => {
+          alert("Message Sent Successfully!");
+          form.current.reset(); // clear the form
+        },
+        (error) => {
+          alert("Message Failed! Try again.");
+          console.error(error.text);
+        }
+      );
+  };
+
   return (
     <div id="contact" className="contact-container">
       <h2>
         WE’RE HERE TO <span className="highlight-link">HELP</span>
       </h2>
       <div className="contact-content">
-        <form className="contact-form">
+        <form ref={form} onSubmit={sendEmail} className="contact-form">
           <div className="form-group">
             <FaUser className="icon" />
-            <input type="text" placeholder="Name" />
+            <input type="text" name="user_name" placeholder="Name" required />
           </div>
           <div className="form-group">
             <FaEnvelope className="icon" />
-            <input type="email" placeholder="Mail id" />
+            <input type="email" name="user_email" placeholder="Mail id" required />
           </div>
           <div className="form-group">
             <FaPhone className="icon" />
-            <input type="tel" placeholder="Phone Number" />
+            <input type="tel" name="user_phone" placeholder="Phone Number" />
           </div>
           <div className="form-group textarea">
             <FaRegClipboard className="icon" />
-            <textarea placeholder="Details"></textarea>
+            <textarea name="message" placeholder="Details" required></textarea>
           </div>
           <button type="submit">
             Send a message <FaPaperPlane />
           </button>
         </form>
+
+        {/* Static Info Section */}
         <div className="contact-info">
           <div className="info-block">
             <BsFillQuestionCircleFill className="info-icon" />
