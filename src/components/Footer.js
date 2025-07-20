@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import footerimg from "../assert/Kaga info tech_footer 1.png"
 
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebook, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
@@ -11,8 +12,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-grid">
         <div className="footer-logo">
-          <div className="logo-box">Logo</div>
-          <div className="empty-box"></div>
+          <div className="logo-box"><img src={footerimg} alt="footer logo" /></div>
+          <div className="empty-box"><p className="emt-p">At KAGA INFOTECH, we empower businesses through cutting-edge software development, creative UI/UX design, and custom IT solutions. With a strong focus on innovation, quality, and user experience, we help startups and enterprises scale faster in today’s digital-first world.Whether you need a custom web application, a scalable mobile app, or a complete product design strategy — we build solutions that drive results.</p></div>
         </div>
         <div className="footer-links">
           <h3>Quick Links</h3>

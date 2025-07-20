@@ -4,7 +4,7 @@ import serviceHeaderImg1 from "../assert/service1.jpg";
 import serviceHeaderImg2 from "../assert/service2.jpg";
 import devImg from "../assert/dev.jpg";
 import marketingImg from "../assert/marketing.jpg";
-import ecommerceImg from "../assert/ecommerce.png";
+import ecommerceImg from "../assert/ecommerce.jpg";
 
 const Services = () => {
     return (

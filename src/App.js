@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
-import ProjectsSection from "./components/ProjectsSection";
+// import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import LoginPage from "./components/LoginPage";
 import Register from "./components/Register";
@@ -45,7 +45,7 @@ function App() {
                 <HeroSection />
                 <AboutSection />
                 <ServicesSection />
-                <ProjectsSection />
+                {/* <ProjectsSection /> */}
                 <ReviewSection />
                 <ContactSection />
               </>

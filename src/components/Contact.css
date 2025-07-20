@@ -6,6 +6,7 @@
     padding: 60px;
     max-width: 100vw;
     overflow-x: hidden;
+    font-family: 'Space Grotesk';
 }
 
 .contact-container {
@@ -15,9 +16,10 @@
 
 
 .contact-container h2 {
-    font-size: 28px;
+    font-size: 40px;
     margin-bottom: 40px;
     font-weight: 700;
+    font-family: 'Space Grotesk';
 }
 
 .highlight-link {
@@ -64,8 +66,9 @@ textarea {
     border: none;
     background: none;
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
     outline: none;
+    font-family: 'Space Grotesk';
 }
 
 textarea {
@@ -107,18 +110,23 @@ textarea {
 
 .info-block h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 30px;
+    font-family: 'Space Grotesk';
 }
 
 .info-block p {
     margin: 4px 0;
-    font-size: 14px;
+    font-size: 18px;
+    font-family: 'Space Grotesk';
+    opacity: 50%;
 }
 
 .info-block a {
     color: #1d4ed8;
     font-weight: 500;
     text-decoration: none;
+    font-family: 'Space Grotesk';
+    font-size: 25px;
 }
 
 .contact-info hr {

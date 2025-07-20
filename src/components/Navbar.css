@@ -6,6 +6,8 @@
   padding: 15px 30px;
   flex-wrap: wrap;
   position: relative;
+
+  font-family: 'Space Grotesk';
 }
 
 .logo img {
@@ -32,8 +34,9 @@
   background: none;
   border: none;
   color: #000000;
-  font-size: 14px;
+  font-size: 20px;
   cursor: pointer;
+  font-family: 'Space Grotesk';
 }
 
 /* Auth buttons */

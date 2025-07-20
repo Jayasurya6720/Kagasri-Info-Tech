@@ -1,6 +1,6 @@
 import React from "react";
 import "./ServicesSection.css";
-import webDevIcon from "../assert/web-dev.png";
+import webDevIcon from "../assert/Website.png";
 import marketingIcon from "../assert/marketing.png";
 import ecommerceIcon from "../assert/ecommerce.png";
 
