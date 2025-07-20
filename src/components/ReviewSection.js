@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./ReviewSection.css";
 import reviews from "./reviewsData";
 
@@ -6,30 +6,30 @@ const ReviewSection = () => {
   const [current, setCurrent] = useState(0);
   const [animating, setAnimating] = useState(false);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     if (animating) return;
     setAnimating(true);
     setTimeout(() => {
       setCurrent((prev) => (prev + 1) % reviews.length);
       setAnimating(false);
-    }, 300); // match with CSS transition
-  };
+    }, 300);
+  }, [animating]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     if (animating) return;
     setAnimating(true);
     setTimeout(() => {
       setCurrent((prev) => (prev - 1 + reviews.length) % reviews.length);
       setAnimating(false);
     }, 300);
-  };
+  }, [animating]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000); // auto change every 5 seconds
+    }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [nextSlide]); // ✅ Warning fixed
 
   return (
     <section className="testimonial-section">
