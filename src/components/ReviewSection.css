@@ -16,7 +16,7 @@
   margin-bottom: 40px;
   border-bottom: 2px solid #6b78c5;
   display: inline-block;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk';
 }
 
 .say {
@@ -34,7 +34,7 @@
   position: relative;
   text-align: left;
   z-index: 2;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk';
   overflow: hidden;
 }
 
@@ -61,7 +61,7 @@
   font-size: 26px;
   margin-bottom: 30px;
   line-height: 1.6;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk';
   height: 200px;
   width: 850px;
   word-spacing: 2px;
@@ -83,14 +83,14 @@
   font-size: 26px;
   font-weight: 700;
   margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk';
 }
 
 .testimonial-user p {
   font-size: 20px;
   color: #555;
   margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk';
 }
 
 .nav-buttons {
@@ -145,6 +145,14 @@
 .slide-out {
   opacity: 0;
   transform: translateX(1000px);
+}
+
+.testimonial-section h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-family: 'Space Grotesk';
+  margin-left: 25px;
 }
 
 /* ===========================

@@ -10,26 +10,31 @@ const Navbar = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleNavigation = (path) => {
+    navigate(path);
+    setMobileMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
-      <div className="logo">
+      <div className="logo" onClick={() => handleNavigation("/")} style={{ cursor: "pointer" }}>
         <img src="/logo.png" alt="logo" />
       </div>
 
       <div className="burger" onClick={toggleMenu}>
-        &#9776;
+        {isMobileMenuOpen ? '×' : '☰'}
       </div>
 
       <div className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}>
-        <button className="login" onClick={() => navigate("/")}>HOME</button>
-        <button className="login" onClick={() => navigate("/aboutus")}>ABOUT US</button>
-        <button className="login" onClick={() => navigate("/Services")}>SERVICES</button>
-        <button className='login' onClick={() => navigate("/Contact")}>CONTACT US</button>
+        <button className="login" onClick={() => handleNavigation("/")}>HOME</button>
+        <button className="login" onClick={() => handleNavigation("/aboutus")}>ABOUT US</button>
+        <button className="login" onClick={() => handleNavigation("/Services")}>SERVICES</button>
+        <button className="login" onClick={() => handleNavigation("/Contact")}>CONTACT US</button>
       </div>
 
       <div className={`auth-buttons ${isMobileMenuOpen ? "active" : ""}`}>
-        <button className="login" onClick={() => navigate("/login")}>LOG IN</button>
-        <button className="signup" onClick={() => navigate("/signup")}>SIGN UP</button>
+        <button className="login" onClick={() => handleNavigation("/login")}>LOG IN</button>
+        <button className="signup" onClick={() => handleNavigation("/signup")}>SIGN UP</button>
       </div>
     </nav>
   );

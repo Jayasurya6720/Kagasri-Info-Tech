@@ -2,8 +2,10 @@ import React from "react";
 import "./AboutUs.css";
 import topImg from "../assert/top-img.jpg";
 import centerImg from "../assert/center-img.jpg";
+import { useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
+  const navigate = useNavigate();
   return (
     <div className="about-container">
       {/* Top Section */}
@@ -120,31 +122,32 @@ const AboutUs = () => {
           <div className="up1">
             <h2>Shaping the Future - <span className="blue">Vision</span></h2>
             <p>
-              We grow together — as a team, a community, and a catalyst for digital success...
-            </p>
+              We grow together — as a team, a community, and a catalyst for digital success. By empowering individuals and businesses alike, we create user-driven web experiences that convert, inspire, and scale. Our goal is to lead the future of web innovation where success is shared, stories are told through design, and every click moves us forward — together.            </p>
             {/* Horizontal line */}
-          <div className="vision-line"></div>
+            <div className="vision-line"></div>
           </div>
-          
-            {/* Horizontal line */}
-          {/* <div className="vision-line"></div> */}
 
+          {/* Horizontal line */}
+          {/* <div className="vision-line"></div> */}
+             
 
           <div className="up2">
-            
-            </div> {/* empty space center */}
+
+          </div> {/* empty space center */}
+
+          <div className="v1"></div>
 
           <div className="up3"></div> {/* another empty if needed */}
 
           <div className="up4">
+            
+
             {/* Horizontal line */}
-          <div className="vision-line"></div>
+            <div className="vision-line"></div>
             <h2>What We Aim to Achieve - <span className="blue">Mission</span></h2>
             <p>
-              Our mission is to craft modern, user-focused websites and result-driven...
+              Our mission is to craft modern, user-focused websites and result-driven digital strategies that empower startups and small businesses to grow online. We deliver scalable, mobile-first, SEO-optimized solutions through collaboration, clarity, and continuous innovation — because when one of us grows, we all grow.
             </p>
-            
-          
           </div>
           {/* Horizontal line */}
           {/* <div className="vision-line"></div> */}
@@ -165,14 +168,17 @@ const AboutUs = () => {
       <br />
 
       {/* Footer Section */}
-      <footer className="about-footer">
-        <p className="footer-note">
-          Your ideas, feedback, or even just a hello — we’re always happy to connect.
-        </p>
-        <p className="footer-note">
-          Whether you have a question, need support, or want to explore how we can work together — we’re here for it.
-        </p>
-        <button className="contact-btn">CONTACT US</button>
+      <footer className="about-ft">
+        <div className="ft-note">
+          <h3>Your ideas, feedback, or even just a hello — we’re always happy to connect.</h3>
+          <p>
+            Whether you have a question, need support, or want to explore how we can work together — we’re here for it.
+          </p>
+        </div>
+
+        <button className="contact-btn" onClick={() => navigate("/contact")}>
+          CONTACT US
+        </button>
       </footer>
     </div>
   );

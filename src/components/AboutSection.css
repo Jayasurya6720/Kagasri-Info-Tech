@@ -5,33 +5,32 @@
   padding: 80px 50px;
   background-color: #f9f9f9;
   flex-wrap: wrap;
-    font-family: 'Space Grotesk';
-
+  font-family: 'Space Grotesk';
 }
 
 .about-text {
-    font-family: 'Space Grotesk';
+  font-family: 'Space Grotesk';
   flex: 1;
   min-width: 320px;
   max-width: 50%;
 }
 
 .about-text h2 {
-    font-family: 'Space Grotesk';
+  font-family: 'Space Grotesk';
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 30px;
 }
 
 .highlight-link {
-    font-family: 'Space Grotesk';
+  font-family: 'Space Grotesk';
   color: #1d4ed8;
   border-bottom: 2px solid #1d4ed8;
   text-decoration: none;
 }
 
 .about-text p {
-    font-family: 'Space Grotesk';
+  font-family: 'Space Grotesk';
   font-size: 26px;
   line-height: 1.8;
   color: #222;
@@ -56,7 +55,6 @@
 
 .about-images-grid {
   display: grid;
-  
   gap: 8px;
   flex: 1;
   max-width: 500px;
@@ -94,4 +92,33 @@
   grid-column-start: 3;
   grid-row-start: 1;
   grid-row: span 2;
+}
+
+/* =====================================
+   MOBILE RESPONSIVE (max-width: 768px)
+====================================== */
+@media only screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    align-items: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 18px;
+  }
+  .about-images-grid {
+    display: none;
+  }
+ 
+
 }

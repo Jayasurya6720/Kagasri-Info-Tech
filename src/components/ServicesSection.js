@@ -11,16 +11,19 @@ const services = [
     title: "Website Development",
     description: "Crafting impactful websites that bring your business to life online.",
     icon: webDevIcon,
+    url: "/websitedevelopment",
   },
   {
     title: "Digital Marketing",
     description: "Amplifying your reach and strengthening your brand to turn clicks into connections.",
     icon: marketingIcon,
+    url: "/digitalmarketing",
   },
   {
     title: "E-Commerce Website",
     description: "Building scalable engaging online stores that help you effortlessly sell and expand.",
     icon: ecommerceIcon,
+    url: "/ecommerce",
   },
 ];
 
@@ -36,7 +39,7 @@ const ServicesSection = () => {
             <img src={service.icon} alt={service.title} />
             <h3>{service.title}</h3>
             <p>{service.description}</p>
-            <a href="/">Learn More <span className="arrow">→</span></a>
+            <a href={service.url}>Learn More <span className="arrow">→</span></a>
           </div>
         ))}
       </div>

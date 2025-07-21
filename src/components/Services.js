@@ -5,8 +5,10 @@ import serviceHeaderImg2 from "../assert/service2.jpg";
 import devImg from "../assert/dev.jpg";
 import marketingImg from "../assert/marketing.jpg";
 import ecommerceImg from "../assert/ecommerce.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+    const navigate = useNavigate();
     return (
         <div className="services-container">
             <section className="top-section">
@@ -52,10 +54,10 @@ const Services = () => {
                             speed. Our code is clean, scalable, and built to perform on all
                             devices.
                         </p>
-                        <button className="btn-st">Get the Details</button>
+                        <button className="btn-st" onClick={() => navigate("/websitedevelopment")}>Get the Details</button>
                     </div>
                 </div>
-                 <hr className="divider" />
+                <hr className="divider" />
 
 
                 {/* Digital Marketing */}
@@ -69,7 +71,7 @@ const Services = () => {
                             real customers. With consistent tracking and optimization, we make
                             your brand impossible to ignore.
                         </p>
-                        <button className="btn-st">Get the Details</button>
+                        <button className="btn-st" onClick={() => navigate("/digitalmarketing")}>Get the Details</button>
                     </div>
                 </div>
                 <hr className="divider" />
@@ -85,13 +87,27 @@ const Services = () => {
                             ensure a seamless shopping experience. Whether you’re launching or
                             scaling, we build stores that sell.
                         </p>
-                        <button className="btn-st">Get the Details</button>
+                        <button className="btn-st" onClick={() => navigate("/ecommerce")}>Get the Details</button>
                     </div>
                 </div>
-                   <hr className="divider" />
 
-            </section>
-        </div>
+                {/* Footer Section */}
+                <footer className="about-ft">
+                    <div className="ft-note">
+                        <h3>Your ideas, feedback, or even just a hello — we’re always happy to connect.</h3>
+                        <p>
+                            Whether you have a question, need support, or want to explore how we can work together — we’re here for it.
+                        </p>
+                    </div>
+
+                    <button className="contact-btn" onClick={() => navigate("/contact")}>
+                        CONTACT US
+                    </button>
+                </footer>
+
+
+            </section >
+        </div >
     );
 };
 

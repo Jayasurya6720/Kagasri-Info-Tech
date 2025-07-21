@@ -18,20 +18,20 @@ const Footer = () => {
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><Link to="/">→ Home</Link></li>
+            <li><Link to="/" >→ Home</Link></li>
             <li><Link to="/aboutus">→ About Us</Link></li>
             <li><Link to="/Services">→ Services</Link></li>
             <li><Link to="/contact">→ Contact</Link></li>
-            <li>→ Privacy Policy</li>
-            <li>→ Terms & Conditions</li>
+            <li><Link to="/pagenotfound">→ Privacy Policy</Link></li>
+            <li><Link to="/pagenotfound">→ Terms & Conditions</Link></li>
           </ul>
         </div>
         <div className="footer-links">
           <h3>Our Services</h3>
           <ul>
-            <li>→ Website Development</li>
-            <li>→ Digital Marketing</li>
-            <li>→ E-Commerce Website</li>
+            <li><Link to="/websitedevelopment">→ Website Development</Link></li>
+            <li><Link to="/digitalmarketing">→ Digital Marketing</Link></li>
+            <li><Link to="/ecommerce">→ E-Commerce Website</Link></li>
           </ul>
         </div>
         <div className="footer-contact">

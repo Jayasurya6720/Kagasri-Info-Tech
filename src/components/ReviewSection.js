@@ -33,8 +33,9 @@ const ReviewSection = () => {
 
   return (
     <section className="testimonial-section">
-      <h2 className="testimonial-heading">
-        What our <span className="say">Clients Say</span>
+      
+      <h2>
+        WHAT OUR <span className="highlight-link">CLIENTS SAY</span>
       </h2>
 
       <div className="testimonial-card">
@@ -44,7 +45,7 @@ const ReviewSection = () => {
           }`}
         >
           <img
-            src={reviews[current].companyLogo}
+            src={reviews[current].logo}
             alt="Company Logo"
             className="company-logo"
           />
@@ -52,7 +53,7 @@ const ReviewSection = () => {
 
           <div className="testimonial-user">
             <img
-              src={reviews[current].userImage}
+              src={reviews[current].avatar}
               alt={reviews[current].name}
               className="user-avatar"
             />

@@ -155,37 +155,53 @@
 /* === Footer Section === */
 .about-footer {
   margin-top: 60px;
-  text-align: center;
+  /* text-align: center; */
   font-size: 13px;
   color: #333;
   border-top: 1px solid #ccc;
   padding: 30px 0;
   width: 100%;
-}
 
+   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.contact-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 .footer-note {
-  margin-bottom: 8px;
-  max-width: 700px;
-  line-height: 1.5;
-  margin-left: auto;
-  margin-right: auto;
+    /* max-width: 600px; */
+  line-height: 1.6;
+  font-size: 20px;
 }
 
 .contact-btn {
-  margin-top: 14px;
-  background-color: #0071f3;
-  color: white;
+   background-color: #007bff;
+  color: #fff;
+  padding: 10px 24px;
   border: none;
-  padding: 10px 22px;
-  border-radius: 5px;
-  font-weight: 500;
-  cursor: pointer;
+  border-radius: 6px;
   font-size: 14px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .contact-btn:hover {
   background-color: #005bb5;
+}
+@media (max-width: 768px) {
+  .about-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-btn {
+    align-self: flex-end;
+  }
 }
 
 /* .image-grid {
@@ -385,11 +401,12 @@
 
 .vision-mission-inner1 {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 0; */
+ 
 
 }
 
@@ -401,7 +418,9 @@
 
 .up4 {
   grid-column: 4 / 6;
-  grid-row: 2;
+  /* grid-row: 2; */
+  margin-top: 50px;
+   text-align: right;
 }
 
 .up2,
@@ -440,4 +459,64 @@
   background-color: #ccc;
   margin: 30px 0;
 
+}
+.v1{
+  border-left: 2px solid #ccc;
+ 
+  
+}
+
+
+.about-ft {
+  margin-top: 60px;
+  font-size: 20px;
+  color: #333;
+  border-top: 1px solid #ccc;
+  padding: 30px 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ft-note {
+  
+  line-height: 1.6;
+}
+
+.ft-note h3 {
+  font-size: 29px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #111;
+}
+
+.contact-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: fit-content;
+}
+
+.contact-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .about-ft {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-btn {
+    align-self: flex-end;
+  }
 }
