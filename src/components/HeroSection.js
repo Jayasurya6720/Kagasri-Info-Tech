@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./HeroSection.css";
 import img from "../assert/nav-img.png";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const phrases = ["Web Development", "UI/UX Design", "Digital Marketing"];
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,7 +34,7 @@ const HeroSection = () => {
             <br></br>
             to help your business grow smarter, faster, better.
           </p>
-          <button className="work-btn">
+          <button className="work-btn" onClick={() => navigate("/contact")}>
             Let’s Work Together <span className="arrow">→</span>
           </button>
         </div>

@@ -112,7 +112,7 @@ textarea {
 
 .info-block h3 {
     margin: 0;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Space Grotesk';
 }
 
@@ -147,5 +147,8 @@ textarea {
 @media (max-width: 768px) {
     .contact-content {
         flex-direction: column;
+    }
+    .info-block h3{
+        font-size: 22px;
     }
 }
