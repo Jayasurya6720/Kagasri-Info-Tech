@@ -112,13 +112,13 @@ textarea {
 
 .info-block h3 {
     margin: 0;
-    font-size: 25px;
+    font-size: 22px;
     font-family: 'Space Grotesk';
 }
 
 .info-block p {
     margin: 4px 0;
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'Space Grotesk';
     opacity: 50%;
 }
@@ -127,7 +127,7 @@ textarea {
     color: #1d4ed8;
     text-decoration: none;
     font-family: 'Space Grotesk';
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .contact-info hr {

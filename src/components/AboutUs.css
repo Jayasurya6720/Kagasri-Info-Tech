@@ -43,7 +43,7 @@
 }
 
 .top-left p {
-  font-size: 30px;
+  font-size: 24px;
   line-height: 1.75;
   color: #222;
   margin-bottom: 14px;
@@ -53,7 +53,7 @@
 }
 
 .highlight-quote {
-  font-size: 30px;
+  font-size: 24px;
   line-height: 1.75;
 
   color: #0071f3;
@@ -225,7 +225,7 @@
 }
 
 .text {
-  font-size: 30px;
+  font-size: 24px;
   line-height: 1.75;
   color: #222;
   margin-bottom: 14px;
@@ -488,7 +488,7 @@
 }
 
 .ft-note h3 {
-  font-size: 29px;
+  font-size: 24px;
   margin-bottom: 10px;
   font-weight: 600;
   color: #111;

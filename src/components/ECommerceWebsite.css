@@ -148,7 +148,7 @@
 }
 
 .divider {
-  margin: 60px 0;
+  margin: 30px 0;
   border: none;
   border-top: 1px solid #ddd;
 }
@@ -157,7 +157,7 @@
 .services-list {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  
 }
 
 .service-block {
@@ -191,7 +191,7 @@
 }
 
 .service-text p {
-  font-size: 30px;
+  font-size: 24px;
   line-height: 1.6;
   margin-bottom: 16px;
   text-align: justify;
@@ -218,7 +218,7 @@
   color: #fff;
 }
 .para{
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1.75;
     color: #222;
     margin-bottom: 14px;
