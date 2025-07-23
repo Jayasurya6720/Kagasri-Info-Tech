@@ -317,6 +317,9 @@
   .ft-note h3{
     font-size: 18px;
   }
+  .ft-note p{
+    font-size: 14px;
+  }
 }
 
 .about-ft {

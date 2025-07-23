@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
@@ -19,6 +21,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Loader from "./components/Loader";
 import PageNotFound from "./components/PageNotFound";
 
+// Layout wrapper for showing Navbar and Footer conditionally
 const AppLayout = ({ children }) => {
   const location = useLocation();
   const hideOnPaths = ["/login", "/signup"];
@@ -37,20 +40,30 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Show loader for 1.5 seconds
+    }, 2000); // Adjust duration as needed
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <Router>
+      <Helmet>
+        <title>Kagasri Info Tech | Web, Digital & E-Commerce Experts</title>
+        <meta name="description" content="Kagasri Info Tech offers web development, digital marketing, and e-commerce services to help businesses grow digitally." />
+        <meta name="keywords" content="Kaga, Kagasri, Web Development, Digital Marketing, E-Commerce, React, ASP.NET, SEO, India IT Company, Salem IT Company,Kaga Info Tech" />
+        <meta name="author" content="Kagasri Info Tech Pvt Ltd" />
+        <meta property="og:title" content="Kagasri Info Tech" />
+        <meta property="og:description" content="Architects of digital dreams. Explore our services for websites, marketing & online stores." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.kagasri.com" />
+        <meta property="og:image" content="https://www.kagasri.com/logo.png" />
+      </Helmet>
+
       {isLoading ? (
         <Loader />
       ) : (
-        
         <AppLayout>
           <ScrollToTop />
           <Routes>
@@ -69,12 +82,12 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<Register />} />
             <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/Services" element={<Services />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/websitedevelopment" element={<WebsiteDevelopment />} />
             <Route path="/ecommerce" element={<ECommerceWebsite />} />
             <Route path="/digitalmarketing" element={<DigitalMarketing />} />
-            <Route path="/pagenotfound" element={<PageNotFound />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </AppLayout>
       )}
