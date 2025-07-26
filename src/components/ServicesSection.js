@@ -1,5 +1,6 @@
 import React from "react";
 import "./ServicesSection.css";
+import { Link } from "react-router-dom";
 import webDevIcon from "../assert/Website.png";
 import marketingIcon from "../assert/marketing.png";
 import ecommerceIcon from "../assert/ecommerce.png";
@@ -39,7 +40,7 @@ const ServicesSection = () => {
             <img src={service.icon} alt={service.title} />
             <h3>{service.title}</h3>
             <p>{service.description}</p>
-            <a href={service.url}>Learn More <span className="arrow">→</span></a>
+            <Link to={service.url}>Learn More <span className="arrow">→</span></Link> {/* ✅ Fix here */}
           </div>
         ))}
       </div>
