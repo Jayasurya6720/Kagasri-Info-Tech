@@ -4,7 +4,7 @@ import serviceHeaderImg1 from "../assert/service1.jpg";
 import serviceHeaderImg2 from "../assert/service2.jpg";
 import devImg from "../assert/dev.jpg";
 import marketingImg from "../assert/marketing.jpg";
-import ecommerceImg from "../assert/ecommerce.jpg";
+import ecommerceImg from "../assert/Business-Img.jpg";
 import { useNavigate } from "react-router-dom";
 
 const Services = () => {
@@ -80,12 +80,12 @@ const Services = () => {
                 <div className="service-block">
                     <img src={ecommerceImg} alt="E-Commerce Website" />
                     <div className="service-text">
-                        <h3>E-Commerce Website</h3>
+                        <h3>Business Process Outsource</h3>
                         <p>
-                            We create custom e-commerce websites that are fast, secure, and
-                            easy to manage. From product listings to secure payments, we
-                            ensure a seamless shopping experience. Whether you’re launching or
-                            scaling, we build stores that sell.
+                        Helps companies streamline operations by offloading 
+                        routine tasks like support, data, and finance. It saves time, 
+                        reduces costs, and lets businesses focus on what they do best.
+                         With secure systems and expert teams, BPO ensures smooth, reliable, and scalable service delivery.
                         </p>
                         <button className="btn-st" onClick={() => navigate("/ecommerce")}>Get the Details</button>
                     </div>

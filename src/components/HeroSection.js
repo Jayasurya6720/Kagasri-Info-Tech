@@ -4,7 +4,7 @@ import img from "../assert/nav-img.png";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
-  const phrases = ["Web Development", "UI/UX Design", "Digital Marketing"];
+  const phrases = ["Web Development", "UI/UX Design", "Digital Marketing","BPO"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
 
