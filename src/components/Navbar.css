@@ -1,0 +1,84 @@
+.navbar {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  position: relative;
+
+  font-family: 'Space Grotesk';
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* Burger icon */
+.burger {
+  display: none;
+  font-size: 28px;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Navigation links */
+.nav-links,
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Space Grotesk';
+}
+
+/* Auth buttons */
+.auth-buttons button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: 1px solid #1873EB;
+  background-color: transparent;
+  color: #1873EB;
+  cursor: pointer;
+}
+
+.auth-buttons .signup {
+  background-color: #1873EB;
+  color: white;
+}
+
+/* ===== Responsive Mobile Styles ===== */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links,
+  .auth-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+  }
+
+  .nav-links.active,
+  .auth-buttons.active {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .nav-links button,
+  .auth-buttons button {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}

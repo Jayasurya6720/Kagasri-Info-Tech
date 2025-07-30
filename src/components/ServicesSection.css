@@ -1,0 +1,121 @@
+.services-container {
+  background-color: #f9f9f9;
+  padding: 70px 50px;
+  font-family: 'Space Grotesk';
+}
+
+.services-container h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-family: 'Space Grotesk';
+}
+
+.highlight-link {
+  font-family: 'Space Grotesk';
+  color: #1d4ed8;
+  border-bottom: 2px solid #1d4ed8;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1;
+  min-width: 260px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Space Grotesk';
+}
+
+.card p {
+  font-family: 'Space Grotesk';
+  flex-grow: 1;
+  font-size: 26px;
+  line-height: 1.6;
+}
+
+.card a {
+  font-family: 'Space Grotesk';
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+   border: 1px solid #000;        /* Border added */
+  padding: 6px 12px;             /* Padding inside the border */
+  border-radius: 6px;            /* Optional: Rounded corners */
+  width: fit-content;            /* Adjust width to content only */
+  transition: all 0.3s ease; 
+}
+
+.card a:hover {
+  background-color: #1d4ed8;
+  color: #fff;
+  border-color: #1d4ed8;
+}
+
+.arrow {
+  font-size: 18px;
+}
+
+/* ============================
+   MOBILE RESPONSIVE STYLES
+============================ */
+@media only screen and (max-width: 768px) {
+  .services-container {
+    padding: 40px 20px;
+  }
+
+  .services-container h2 {
+    font-size: 28px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  .arrow {
+    font-size: 16px;
+  }
+}

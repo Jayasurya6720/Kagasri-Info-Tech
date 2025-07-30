@@ -1,0 +1,124 @@
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 50px;
+  background-color: #f9f9f9;
+  flex-wrap: wrap;
+  font-family: 'Space Grotesk';
+}
+
+.about-text {
+  font-family: 'Space Grotesk';
+  flex: 1;
+  min-width: 320px;
+  max-width: 50%;
+}
+
+.about-text h2 {
+  font-family: 'Space Grotesk';
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.highlight-link {
+  font-family: 'Space Grotesk';
+  color: #1d4ed8;
+  border-bottom: 2px solid #1d4ed8;
+  text-decoration: none;
+}
+
+.about-text p {
+  font-family: 'Space Grotesk';
+  font-size: 26px;
+  line-height: 1.8;
+  color: #222;
+}
+
+.about-images {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 500px;
+  margin-left: 30px;
+}
+
+.about-images img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-images-grid {
+  display: grid;
+  gap: 8px;
+  flex: 1;
+  max-width: 500px;
+  margin-left: 30px;
+  border-radius: 10px;
+  border: 1px solid #00000033;
+  padding: 5px;
+}
+
+.about-images-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.div1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.div2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.div3 {
+  grid-column-start: 1;
+  grid-column: span 2;
+  grid-row-start: 2;
+}
+
+.div4 {
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row: span 2;
+}
+
+/* =====================================
+   MOBILE RESPONSIVE (max-width: 768px)
+====================================== */
+@media only screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    align-items: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 18px;
+  }
+  .about-images-grid {
+    display: none;
+  }
+ 
+
+}

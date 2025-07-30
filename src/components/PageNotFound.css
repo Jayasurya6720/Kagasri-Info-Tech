@@ -1,0 +1,125 @@
+.pagenotfound-wrapper {
+  height: 100vh;
+  background: linear-gradient(#0a0a23, #1c1c3c);
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sky {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.rocket-container {
+  position: absolute;
+  bottom: 0;
+  left: -80px;
+  animation: flyRocket 6s linear infinite;
+}
+
+.rocket {
+  width: 40px;
+  height: 80px;
+  background: #eee;
+  border-radius: 20px;
+  position: relative;
+  margin: 0 auto;
+  border: 2px solid #fff;
+}
+
+.rocket::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 12px;
+  width: 16px;
+  height: 20px;
+  background: red;
+  border-radius: 50% 50% 0 0;
+}
+
+.rocket::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: yellow;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.fire {
+  width: 8px;
+  height: 20px;
+  background: orange;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flame 0.3s infinite alternate;
+  border-radius: 50%;
+}
+
+@keyframes flame {
+  from {
+    height: 20px;
+    background: orange;
+  }
+  to {
+    height: 30px;
+    background: red;
+  }
+}
+
+@keyframes flyRocket {
+  0% {
+    transform: translate(0, 0) rotate(-10deg);
+  }
+  100% {
+    transform: translate(120vw, -100vh) rotate(20deg);
+  }
+}
+
+.error-title {
+  font-size: 36px;
+  margin-top: 30px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.error-subtitle {
+  font-size: 18px;
+  margin-top: 10px;
+  opacity: 0.8;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.home-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  border: none;
+  background-color: #ff4c60;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #ff1f3c;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

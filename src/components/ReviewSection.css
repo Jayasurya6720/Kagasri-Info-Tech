@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+
+.testimonial-section {
+  background: #f8f9fc;
+  padding: 60px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.testimonial-heading {
+  font-size: 40px;
+  font-weight: 800;
+  margin-left: 10%;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #6b78c5;
+  display: inline-block;
+  font-family: 'Space Grotesk';
+}
+
+.say {
+  color: #6b78c5;
+}
+
+.testimonial-card {
+  max-width: 900px;
+  background: white;
+  margin-left: auto;
+  margin-right: 10%;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: left;
+  z-index: 2;
+  font-family: 'Space Grotesk';
+  overflow: hidden;
+}
+
+.testimonial-section::before {
+  content: '';
+  position: absolute;
+  top: 180px;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(97, 117, 207, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.company-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.testimonial-quote {
+  font-size: 26px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-family: 'Space Grotesk';
+  height: 200px;
+  width: 850px;
+  word-spacing: 2px;
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.testimonial-user h4 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Space Grotesk';
+}
+
+.testimonial-user p {
+  font-size: 20px;
+  color: #555;
+  margin: 0;
+  font-family: 'Space Grotesk';
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav-buttons button {
+  background: #e0e0e0;
+  border: none;
+  margin: 0 5px;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 0 4px;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #000;
+}
+
+/* Animation */
+.testimonial-content {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-out {
+  opacity: 0;
+  transform: translateX(1000px);
+}
+
+.testimonial-section h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-family: 'Space Grotesk';
+  margin-left: 25px;
+}
+
+/* ===========================
+   RESPONSIVE STYLES
+=========================== */
+@media screen and (max-width: 1024px) {
+  .testimonial-card {
+    width: 90%;
+    margin-right: 5%;
+    padding: 30px;
+  }
+
+  .testimonial-quote {
+    width: 100%;
+    height: auto;
+    font-size: 22px;
+  }
+
+  .testimonial-user h4 {
+    font-size: 22px;
+  }
+
+  .testimonial-user p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial-heading {
+    font-size: 32px;
+    margin-left: 6%;
+  }
+
+  .testimonial-card {
+    padding: 25px;
+    border-radius: 16px;
+  }
+
+  .testimonial-quote {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .user-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .testimonial-user h4 {
+    font-size: 20px;
+  }
+
+  .testimonial-user p {
+    font-size: 16px;
+  }
+
+  .nav-buttons {
+    top: auto;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .nav-buttons button {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+
+  .dots {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .testimonial-heading {
+    font-size: 28px;
+    margin-left: 5%;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .testimonial-quote {
+    font-size: 18px;
+    height: 140px;
+  }
+
+  .testimonial-user h4 {
+    font-size: 18px;
+  }
+
+  .testimonial-user p {
+    font-size: 14px;
+  }
+
+  .nav-buttons {
+    right: 0;
+    bottom: 10px;
+    top: 0;
+    margin: 20px;
+  }
+
+  .dots {
+    margin-top: 10px;
+  }
+}
